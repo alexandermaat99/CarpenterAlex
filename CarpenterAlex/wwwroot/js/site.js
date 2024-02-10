@@ -1,4 +1,20 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿$(document).ready(function () {
+    $('#calculate').click(function () {
+        var hours = $('#hours').val();
+        if (hours <= 0) {
+            $('#validationMessage').show();
+            $('#totalCost').val('');
+            
+        } else {
+            $('#validationMessage').hide();
+            var rate = $('#ratePerHour').val();
+            var total = hours * rate;
+            $('#totalCost').val(total.toFixed(2));
+        }
+    });
 
-// Write your JavaScript code.
+    $('#hours').change(function () {
+        $('#validationMessage').hide();
+    });
+});
+

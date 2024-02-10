@@ -1,6 +1,26 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Rates";
 }
-<h1>@ViewData["Title"]</h1>
+<div class="rates-calculator">
 
-<p>Use this page to detail your site's privacy policy.</p>
+<h2>Rates Calculator</h2>
+<p>I love to teach the things I've learned over the years! See how much it will cost for me to teach you!'</p>
+    <form id="ratesForm">
+     
+        <div class="form-group">
+            <label for="hours">Number of Hours:</label>
+            <input type="number" class="form-control" id="hours" required min="1" placeholder="Enter hours">
+            <span id="validationMessage" class="text-danger" style="display:none;">Please enter a positive number.</span>
+        </div>
+
+        <div class="form-group">
+            <label>Rate per Hour:</label>
+            <input type="text" class="form-control" id="ratePerHour" value="50" readonly>
+        </div>
+        <button type="button" class="btn btn-primary" id="calculate" style="margin: 10px">Calculate</button>
+    </form>
+    <div class="result mt-3">
+        <label>Total Cost:</label>
+        <input type="text" class="form-control" id="totalCost" readonly>
+    </div>
+</div>
