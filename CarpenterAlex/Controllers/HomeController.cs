@@ -18,7 +18,7 @@ namespace CarpenterAlex.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Rates()
         {
             return View();
         }
